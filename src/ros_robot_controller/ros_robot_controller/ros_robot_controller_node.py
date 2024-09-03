@@ -27,7 +27,7 @@ class RosRobotController(Node):
         self.declare_parameter('imu_frame', 'imu_link')
         self.IMU_FRAME = self.get_parameter('imu_frame').value
 
-        self.imu_pub = self.create_publisher(Imu, '~/imu_raw', 1)
+        self.imu_pub = self.create_publisher(Imu, '/imu/data_raw', 1)
         self.joy_pub = self.create_publisher(Joy, '~/joy', 1)
         self.sbus_pub = self.create_publisher(Sbus, '~/sbus', 1)
         self.button_pub = self.create_publisher(ButtonState, '~/button', 1)
